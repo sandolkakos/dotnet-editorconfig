@@ -22,34 +22,63 @@ The easiest and simplest way is to manually download or copy the raw files into 
 
 If you want to keep the configuration files updated easily without manually copying them each time, you can add this repository as a remote and restore the files directly.
 
-**Adding both files the first time:**
+#### Adding both files the first time:
 ```bash
 git remote add shared-configs https://github.com/sandolkakos/shared-configs.git
 git fetch shared-configs
-git restore --source=shared-configs/main --worktree --staged .editorconfig .gitignore
+git restore --source=shared-configs/main --worktree --staged .editorconfig .gitignore win-update-shared-configs.cmd mac-update-shared-configs.sh
 git commit -m "Add shared .editorconfig and .gitignore"
 ```
+#### 🔄️Updating later:
+Run the update script based on your OS:
+- Windows: `win-update-shared-configs.cmd`
+- Mac/Linux: `chmod +x mac-update-shared-configs.sh && ./mac-update-shared-configs.sh`
 
-**Updating later:**
+Or manually:
 ```bash
 git fetch shared-configs
 git restore --source=shared-configs/main --worktree --staged .editorconfig .gitignore
 git diff --cached --quiet || git commit -m "Sync shared configs"
 ```
 
-### ✨ Plus: Adding only the `.editorconfig` file ✨
+#### Adding only the `.editorconfig` file
 ```bash
 git remote add shared-configs https://github.com/sandolkakos/shared-configs.git
 git fetch shared-configs
-git restore --source=shared-configs/main --worktree --staged .editorconfig
+git restore --source=shared-configs/main --worktree --staged .editorconfig win-update-editorconfig.cmd mac-update-editorconfig.sh
 git commit -m "Add shared .editorconfig"
 ```
 
-**Updating later:**
+#### 🔄️Updating later:
+Run the update script based on your OS:
+- Windows: `win-update-editorconfig.cmd`
+- Mac/Linux: `chmod +x mac-update-editorconfig.sh && ./mac-update-editorconfig.sh`
+
+Or manually:
 ```bash
 git fetch shared-configs
 git restore --source=shared-configs/main --worktree --staged .editorconfig
 git diff --cached --quiet || git commit -m "Sync shared .editorconfig"
+```
+
+#### Adding only the `.gitignore` file
+```bash
+git remote add shared-configs https://github.com/sandolkakos/shared-configs.git
+git fetch shared-configs
+git restore --source=shared-configs/main --worktree --staged .gitignore win-update-gitignore.cmd mac-update-gitignore.sh
+git commit -m "Add shared .gitignore"
+```
+
+#### 🔄️Updating later:
+Run the update script based on your OS:
+- Windows: `win-update-gitignore.cmd`
+- Mac/Linux: `chmod +x mac-update-gitignore.sh && ./mac-update-gitignore.sh`
+
+Or manually:
+```bash
+git fetch shared-configs
+git restore --source=shared-configs/main --worktree --staged .gitignore
+git diff --cached --quiet || git commit -m "Sync shared .gitignore"
 ```
 
 ## Contributing
