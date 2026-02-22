@@ -5,13 +5,17 @@
 # Shared .editorconfig for all .NET / Unity projects.
 # It is added here as the only file in the repo, so that it can be easily consumed as a git subtree in other repos.
 # This will avoid having to copy and paste the file and keep it in sync across repos.
+# -----------------------------------------------------------------------------
+# Adding the first time (in consumer repo):
+#   git remote add editorconfig https://github.com/sandolkakos/dotnet-editorconfig.git
+#   git fetch editorconfig
+#   git restore --source=editorconfig/main --worktree --staged .editorconfig
+#   git commit -m "Sync .editorconfig"
 #
-# Usage (from consuming repo):
-#   git subtree add --prefix=. https://github.com/sandolkakos/dotnet-editorconfig.git main --squash
-#
-# Update:
-#   git subtree pull --prefix=. https://github.com/sandolkakos/dotnet-editorconfig.git main --squash
-#
+# Update (in consumer repo):
+#   git fetch editorconfig
+#   git restore --source=editorconfig/main --worktree --staged .editorconfig
+#   git diff --cached --quiet || git commit -m "Sync .editorconfig from canonical repo"
 # -----------------------------------------------------------------------------
 
 root = true
