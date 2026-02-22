@@ -1,21 +1,6 @@
 # -----------------------------------------------------------------------------
-# Rules here are getting added on a usage basis, meaning only when we see something that we don't like, we add a rule for it.
+# Rules here were added on an usage basis, meaning only when we see something we don't like, we add a rule for it.
 # This is to avoid bringing in a lot of rules that we don't care about, and to keep the file as simple as possible.
-# -----------------------------------------------------------------------------
-# Shared .editorconfig for all .NET / Unity projects.
-# It is added here as the only file in the repo, so that it can be easily consumed as a git subtree in other repos.
-# This will avoid having to copy and paste the file and keep it in sync across repos.
-# -----------------------------------------------------------------------------
-# Adding the first time (in consumer repo):
-#   git remote add editorconfig https://github.com/sandolkakos/dotnet-editorconfig.git
-#   git fetch editorconfig
-#   git restore --source=editorconfig/main --worktree --staged .editorconfig
-#   git commit -m "Sync .editorconfig"
-#
-# Update (in consumer repo):
-#   git fetch editorconfig
-#   git restore --source=editorconfig/main --worktree --staged .editorconfig
-#   git diff --cached --quiet || git commit -m "Sync .editorconfig from canonical repo"
 # -----------------------------------------------------------------------------
 
 root = true
