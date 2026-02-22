@@ -32,6 +32,9 @@ resharper_csharp_keep_blank_lines_in_code = 1
 resharper_place_field_attribute_on_same_line = false
 
 # Rule to place property attributes on a new line
+resharper_place_accessorholder_attribute_on_same_line = false
+
+# Rule to place property attributes on a new line
 csharp_new_line_before_members_in_object_initializers = false
 
 # Use 'var' when the type is apparent
