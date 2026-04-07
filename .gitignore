@@ -54,6 +54,8 @@ Assets/AddressableAssetsData/link.xml*
 .vscode
 .vsconfig
 .utmp/
+/Blend/bin/Debug/*
 leaderboard_authorization.txt
 googleplay_api_credential.json
 appstore_api_secret_id.txt
+
